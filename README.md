@@ -40,7 +40,9 @@ View Script -> [Logistic Regression](exoplanet_exploration/Testing/logistic_regr
 
 ## Model Selection Report
 
-<a align="center" href="https://scikit-learn.org/stable/tutorial/machine_learning_map/index.html" target="_blank"><img alt="Estimator Flowchart" src="Images/ml_map.png" /></a>
+
+<p align="center" href="https://scikit-learn.org/stable/tutorial/machine_learning_map/index.html" target="_blank"><img alt="Estimator Flowchart" src="Images/ml_map.png" /></p>
+
 
 As the flowchart presented above, the model that would be the best estimator for prediction of candidate exoplanets is **Linear SVC (Support Vector Classification)** as the following assumptions.
 
@@ -60,7 +62,7 @@ param_grid = {'C': [0.1, 1, 10, 100, 1000],
 
 grid = GridSearchCV(model, param_grid, refit = True, verbose = 3)
 ```
-> **Output**
+**Output**
 ```javascript
 Best Parameter: {'C': 1000, 'gamma': 1, 'kernel': 'linear'}
 Best Model Score: 0.8832746927280798
@@ -69,5 +71,23 @@ Best Model Score: 0.8832746927280798
 **Model Summary**
 
 <p align="center">
-  <img src="Images/svc_summary.png">
+  <img src="Images/svc_summary.png" width=400>
+</p>
+
+### Model Comparison
+
+<p align="center">
+  <img src="Images/model_comparison.png">
+</p>
+
+As the graph presented above, it shows that the Random Forest model accuracy is higher than SVC model accuracy. However, training model duration was about an hour for Random Forest and 5 minutes for SVC with less than 100K samples. Therefore, if the model creation takes time and resources used into consideration, SVC model tend to perform well within limited budget and time.   
+
+
+## Contributor
+
+<a><b>© Atcharaporn B Puccini</b></a>
+
+<p><a href="https://github.com/abpuccini" target="_blank"><img alt="Github" src="https://img.shields.io/badge/GitHub-%2312100E.svg?&style=for-the-badge&logo=Github&logoColor=white" /></a> 
+<a href="https://www.linkedin.com/in/thomas-guibert" target="_blank"><img alt="LinkedIn" src="https://img.shields.io/badge/linkedin-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white" /></a> 
+<a href="mailto:b.atcharaporn@gmail.com"><img href="mailto:b.atcharaporn@gmail.com" alt="b.atcharaporn@gmail.com" src="https://img.shields.io/badge/Email-b.atcharaporn%40gmail.com-yellowgreen?style=for-the-badge&logo=Gmail"/></a>
 </p>
