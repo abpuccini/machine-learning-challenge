@@ -38,7 +38,7 @@ View Script -> [Logistic Regression](exoplanet_exploration/Testing/logistic_regr
 
 - Using model accuracy and resources used for choosing the best model
 
-### Reporting
+## Model Selection Report
 
 <a align="center" href="https://scikit-learn.org/stable/tutorial/machine_learning_map/index.html" target="_blank"><img alt="Estimator Flowchart" src="Images/ml_map.png" /></a>
 
@@ -52,18 +52,18 @@ As the flowchart presented above, the model that would be the best estimator for
 
 After training and fitting model with selective features, applying GridSearchCV to tune the best model with different parameters. The result show that the best parameter is **'C': 1000, 'gamma': 1, 'kernel': 'linear'** with **88.23%** accuracy.
 
-    ```javascript
-    # Defining parameter range 
-    param_grid = {'C': [0.1, 1, 10, 100, 1000],  
-                'gamma': [1, 0.1, 0.01, 0.001, 0.0001], 
-                'kernel': ['linear']}  
-    
-    grid = GridSearchCV(model, param_grid, refit = True, verbose = 3)
+```javascript
+# Defining parameter range 
+param_grid = {'C': [0.1, 1, 10, 100, 1000],  
+            'gamma': [1, 0.1, 0.01, 0.001, 0.0001], 
+            'kernel': ['linear']}  
 
-    >> Output
-    >> Best Parameter: {'C': 1000, 'gamma': 1, 'kernel': 'linear'}
-    >> Best Model Score: 0.8832746927280798
-    ```
+grid = GridSearchCV(model, param_grid, refit = True, verbose = 3)
+
+>> Output
+>> Best Parameter: {'C': 1000, 'gamma': 1, 'kernel': 'linear'}
+>> Best Model Score: 0.8832746927280798
+```
 
 **Model Summary**
 
