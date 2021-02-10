@@ -20,6 +20,10 @@ View Script -> [Logistic Regression](exoplanet_exploration/Testing/logistic_regr
 
 - Perform feature selection and remove unnecessary features.
 
+    * Apply `RFE` method to identify the importance of ecah feature.
+    
+    * Select only the features that support the outcome. 
+
 - Use `MinMaxScaler` to scale the numerical data.
 
 - Separate the data into training and testing data.
@@ -36,4 +40,33 @@ View Script -> [Logistic Regression](exoplanet_exploration/Testing/logistic_regr
 
 ### Reporting
 
+<a align="center" href="https://scikit-learn.org/stable/tutorial/machine_learning_map/index.html" target="_blank"><img alt="Estimator Flowchart" src="Images/ml_map.png" /></a>
 
+As the flowchart presented above, the model that would be the best estimator for prediction of candidate exoplanets is **Linear SVC (Support Vector Classification)** as the following assumptions.
+
+- The model will predict catagorial output (y).
+
+- y is a labeled data.
+
+- There are less than 100K samples in the dataset.
+
+After training and fitting model with selective features, applying GridSearchCV to tune the best model with different parameters. The result show that the best parameter is **'C': 1000, 'gamma': 1, 'kernel': 'linear'** with **88.23%** accuracy.
+
+    ```javascript
+    # Defining parameter range 
+    param_grid = {'C': [0.1, 1, 10, 100, 1000],  
+                'gamma': [1, 0.1, 0.01, 0.001, 0.0001], 
+                'kernel': ['linear']}  
+    
+    grid = GridSearchCV(model, param_grid, refit = True, verbose = 3)
+
+    >> Output
+    >> Best Parameter: {'C': 1000, 'gamma': 1, 'kernel': 'linear'}
+    >> Best Model Score: 0.8832746927280798
+    ```
+
+**Model Summary**
+
+<p align="center">
+  <img src="Images/svc_summary.png">
+</p>
