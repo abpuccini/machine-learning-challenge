@@ -59,11 +59,11 @@ param_grid = {'C': [0.1, 1, 10, 100, 1000],
             'kernel': ['linear']}  
 
 grid = GridSearchCV(model, param_grid, refit = True, verbose = 3)
-
->> Output
->> Best Parameter: {'C': 1000, 'gamma': 1, 'kernel': 'linear'}
->> Best Model Score: 0.8832746927280798
 ```
+> **Output**
+> Best Parameter: {'C': 1000, 'gamma': 1, 'kernel': 'linear'}
+> Best Model Score: 0.8832746927280798
+
 
 **Model Summary**
 
