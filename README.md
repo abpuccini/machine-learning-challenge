@@ -74,10 +74,12 @@ Best Model Score: 0.8832746927280798
   <img src="Images/svc_summary.png" width=400>
 </p>
 
+
 ### Model Comparison
 
 <p align="center">
-  <img src="Images/model_comparison.png">
+    <img src="Images/model_com_summary.png">
+    <img src="Images/model_comparison.png">
 </p>
 
 As the graph presented above, it shows that the Random Forest model accuracy is higher than SVC model accuracy. However, training model duration was about an hour for Random Forest and 5 minutes for SVC with less than 100K samples. Therefore, if the model creation takes time and resources used into consideration, SVC model tend to perform well within limited budget and time.   
@@ -85,9 +87,6 @@ As the graph presented above, it shows that the Random Forest model accuracy is 
 
 ## Contributor
 
-<a><b>© Atcharaporn B Puccini</b></a>
-
-<p><a href="https://github.com/abpuccini" target="_blank"><img alt="Github" src="https://img.shields.io/badge/GitHub-%2312100E.svg?&style=for-the-badge&logo=Github&logoColor=white" /></a> 
+<a><b>© Atcharaporn B Puccini </b></a><a href="https://github.com/abpuccini" target="_blank"><img alt="Github" src="https://img.shields.io/badge/GitHub-%2312100E.svg?&style=for-the-badge&logo=Github&logoColor=white" /></a> 
 <a href="https://www.linkedin.com/in/thomas-guibert" target="_blank"><img alt="LinkedIn" src="https://img.shields.io/badge/linkedin-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white" /></a> 
 <a href="mailto:b.atcharaporn@gmail.com"><img href="mailto:b.atcharaporn@gmail.com" alt="b.atcharaporn@gmail.com" src="https://img.shields.io/badge/Email-b.atcharaporn%40gmail.com-yellowgreen?style=for-the-badge&logo=Gmail"/></a>
-</p>
