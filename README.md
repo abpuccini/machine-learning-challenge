@@ -4,7 +4,7 @@
 
 ## Background
 
-Over a period of nine years in deep space, the NASA Kepler space telescope has been out on a planet-hunting mission to discover hidden planets outside of our solar system. To help process this data, machine learning models will be created in order to capable of classifying candidate exoplanets from the raw dataset.
+Over a period of nine years in deep space, the NASA Kepler space telescope has been out on a planet-hunting mission to discover hidden planets outside of our solar system. To help process this data, machine learning models will be created in order to classify candidate exoplanets from the raw dataset.
 
 ## Data Source
 
@@ -20,7 +20,7 @@ View Script -> [Logistic Regression](exoplanet_exploration/Testing/logistic_regr
 
 - Perform feature selection and remove unnecessary features.
 
-    * Apply `RFE` method to identify the importance of ecah feature.
+    * Apply the `RFE` method to identify the importance of each feature.
     
     * Select only the features that support the outcome. 
 
@@ -46,13 +46,13 @@ View Script -> [Logistic Regression](exoplanet_exploration/Testing/logistic_regr
 
 As the flowchart presented above, the model that would be the best estimator for prediction of candidate exoplanets is **Linear SVC (Support Vector Classification)** as the following assumptions.
 
-- The model will predict catagorial output (y).
+- The model will predict categorical output (y).
 
 - y is a labeled data.
 
 - There are less than 100K samples in the dataset.
 
-After training and fitting model with selective features, applying GridSearchCV to tune the best model with different parameters. The result show that the best parameter is **'C': 1000, 'gamma': 1, 'kernel': 'linear'** with **88.23%** accuracy.
+After training and fitting a model with selective features, applying GridSearchCV to tune the best model with different parameters. The result show that the best parameter is **'C': 1000, 'gamma': 1, 'kernel': 'linear'** with **88.23%** accuracy.
 
 ```javascript
 # Defining parameter range 
@@ -77,11 +77,11 @@ Best Model Score: 0.8832746927280798
 
 ### Model Comparison
 
-**Comparison Table** | **Comparion Chart**
+**Comparison Table** | **Comparison Chart**
 ------------ | -------------
 ![ComparisonTable](Images/model_com_summary.png) | ![ComparisonTable](Images/model_comparison.png)
 
-As the graph presented above, it shows that the Random Forest model accuracy is higher than SVC model accuracy. However, training model duration was about an hour for Random Forest and 5 minutes for SVC with less than 100K samples. Therefore, if the model creation takes time and resources used into consideration, SVC model tend to perform well within limited budget and time.   
+As the graph presented above, it shows that the Random Forest model accuracy is higher than SVC model accuracy. However, training model duration was about an hour for Random Forest and 5 minutes for SVC with less than 100K samples. Therefore, if the model creation takes time and resources used into consideration, the SVC model tend to perform well within a limited budget and time.   
 
 
 ## Contributor
