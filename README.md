@@ -1,6 +1,6 @@
 # Machine Learning - Exoplanet Exploration
 
-[Background](#Background) | [Data Source](#DataSource) | [Model Creation](#MachineLearningModelCreation) | [Reporting](#Reporting)
+[Background](#Background) | [Data Source](#DataSource) | [Model Creation](#MachineLearningModelCreation) | [Model Selection Report](#ModelSelectionReport)
 
 ## Background
 
@@ -77,13 +77,9 @@ Best Model Score: 0.8832746927280798
 
 ### Model Comparison
 
-Comparison Table | Comparion Chart
+**Comparison Table** | **Comparion Chart**
 ------------ | -------------
-<p align="center">
-    <img src="Images/model_com_summary.png">
-</p> | <p align="center">
-    <img src="Images/model_comparison.png">
-</p>
+![ComparisonTable](Images/model_com_summary.png) | ![ComparisonTable](Images/model_comparison.png)
 
 As the graph presented above, it shows that the Random Forest model accuracy is higher than SVC model accuracy. However, training model duration was about an hour for Random Forest and 5 minutes for SVC with less than 100K samples. Therefore, if the model creation takes time and resources used into consideration, SVC model tend to perform well within limited budget and time.   
 
