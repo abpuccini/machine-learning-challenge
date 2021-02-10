@@ -14,32 +14,32 @@ Over a period of nine years in deep space, the NASA Kepler space telescope has b
 
 View Script -> [Logistic Regression](exoplanet_exploration/Testing/logistic_regression.ipynb) | [Support Vector Classification](exoplanet_exploration/Testing/svc.ipynb) | [Random Forest](exoplanet_exploration/Testing/random_forest.ipynb) | [Deep Learning](exoplanet_exploration/Testing/deep_learning.ipynb)
 
-### Preprocess the raw data
+- **Preprocess the raw data**
 
-- Preprocess the dataset prior to fitting the model.
+    - Preprocess the dataset prior to fitting the model.
 
-- Perform feature selection and remove unnecessary features.
+    - Perform feature selection and remove unnecessary features.
 
-    * Apply the `RFE` method to identify the importance of each feature.
+        * Apply the `RFE` method to identify the importance of each feature.
+        
+        * Select only the features that support the outcome. 
+
+    - Use `MinMaxScaler` to scale the numerical data.
+
+    - Separate the data into training and testing data.
+
+- **Tune Model Parameters**
+
+    - Use [GridSearch](https://scikit-learn.org/stable/modules/grid_search.html) to tune model parameters.
+
+    - Tune model
+
+- **Compare Models created**
+
+    - Using model accuracy and resources used for choosing the best model
     
-    * Select only the features that support the outcome. 
-
-- Use `MinMaxScaler` to scale the numerical data.
-
-- Separate the data into training and testing data.
-
-### Tune Model Parameters
-
-- Use [GridSearch](https://scikit-learn.org/stable/modules/grid_search.html) to tune model parameters.
-
-- Tune model
-
-### Compare Models created
-
-- Using model accuracy and resources used for choosing the best model
 
 ## Model Selection Report
-
 
 <p align="center" href="https://scikit-learn.org/stable/tutorial/machine_learning_map/index.html" target="_blank"><img alt="Estimator Flowchart" src="Images/ml_map.png" /></p>
 
